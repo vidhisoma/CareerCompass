@@ -118,7 +118,6 @@ const styles = {
   btn: (variant = "primary") => ({
     padding: "10px 20px",
     borderRadius: 10,
-    border: "none",
     cursor: "pointer",
     fontSize: 13.5,
     fontWeight: 600,
@@ -746,4 +745,3 @@ export default function App() {
     </>
   );
 }
-
