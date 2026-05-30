@@ -1,1 +1,1 @@
-# CareerCompass
+CareerCompass - AI Job Search Assistant
