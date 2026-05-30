@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useRef } from "react";
  
 const COLORS = {
   bg: "#0A0A0F", surface: "#111118", surfaceHigh: "#1A1A24",
@@ -185,7 +185,7 @@ function FileDropZone({ onFileRead, label="Drop your resume here or click to upl
     reader.readAsText(file);
   };
  
-  const onDrop=useCallback((e)=>{ e.preventDefault(); setDragging(false); handleFile(e.dataTransfer.files[0]); },[disabled]);
+  const onDrop=(e)=>{ e.preventDefault(); setDragging(false); handleFile(e.dataTransfer.files[0]); };
  
   return(
     <div onClick={()=>!disabled&&inputRef.current.click()} onDragOver={(e)=>{e.preventDefault();if(!disabled)setDragging(true);}} onDragLeave={()=>setDragging(false)} onDrop={onDrop}
